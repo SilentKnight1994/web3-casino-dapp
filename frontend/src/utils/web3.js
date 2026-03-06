@@ -29,6 +29,7 @@ export const connectWallet = async () => {
 
     const provider = new ethers.BrowserProvider(window.ethereum);
     const signer = await provider.getSigner();
+    const trialBalance =  await provider;
     const balance = await provider.getBalance(accounts[0]);
     console.log("Balance From Connect:",balance);
     return {
